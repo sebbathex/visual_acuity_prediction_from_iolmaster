@@ -1,0 +1,14 @@
+# Patient data and everything derived from it must never be committed.
+input/
+work/
+results/
+*.parquet
+*.csv
+*.jpg
+*.png
+*.pdf
+*.pt
+catboost_info/
+logs.log
+__pycache__/
+.venv/

@@ -1,0 +1,21 @@
+[project]
+name = "iolmaster-va-compendium"
+version = "1.0.0"
+description = "Analysis code compendium: visual acuity from routine IOLMaster 700 biometry images (JMIR AI ms#93240)"
+requires-python = ">=3.10,<3.12"
+# Versions used for the published results (see manuscript, "Computational Environment").
+dependencies = [
+    "pycaret==3.3.2",
+    "scikit-learn==1.4.2",
+    "lightgbm==4.7.0",
+    "xgboost==3.2.0",
+    "catboost==1.2.10",
+    "pandas==2.1.4",
+    "numpy==1.26.4",
+    "scipy==1.11.4",
+    "pyarrow>=14",
+]
+
+[project.optional-dependencies]
+# Only needed for step 1 (image embeddings)
+embeddings = ["torch", "torchvision", "transformers", "ultralytics", "pillow"]
